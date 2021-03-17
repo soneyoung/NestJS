@@ -8,7 +8,7 @@ export class MoviesController {
     constructor(private readonly moviesService: MoviesService){}
     
     @Get()
-    getAll(): Movie[] {
+    getAll(): Movie[] {     // getAll(@Req() req, @Res() res)  -> Express 접근 가능
         return this.moviesService.getAll();
     }
     // @Get("search")  // search 가 get 보다 아래에 있으면 search 를 id로 판단 -> 위로 올려버리기
